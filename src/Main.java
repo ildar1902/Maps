@@ -65,6 +65,21 @@ public class Main {
         Recipe recipeFirst = new Recipe(products, amountCost1, "\"Лёгкий фруктовый салат\"");
         System.out.println(recipeFirst);
 
+//        Дз-1. Задание 3
+        System.out.println();
+        System.out.println("    Дз-1. Задание 3");
+        Map<String, Integer> map = new HashMap<>();
+        Test test = new Test(map);
+        map.put("qwerty", 10);
+        map.put("qwerty1", 11);
+        map.put("qwerty2", 12);
+        map.put("qwerty3", 14);
+        map.put("qwerty4", 15);
+        map.put("qwerty5", 16);
+        System.out.println(map);
+        test.addTest("qwerty6", 20);
+        System.out.println(map);
+
     }
 
     public static Double calculatePrice(HashMap<Product, Double> products) {
