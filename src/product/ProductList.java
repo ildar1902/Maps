@@ -27,7 +27,7 @@ public class ProductList {
         if (products.containsKey(product)) {
             throw new IllegalArgumentException("В списке уже есть " + product.getName());
         }
-        products.put(product, (product.getVolume()* product.getPrice()));
+        products.put(product, product.getVolume()* product.getPrice());
         System.out.println("Вы добавили " + product.getName());
 
     }

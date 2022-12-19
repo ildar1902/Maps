@@ -42,8 +42,8 @@ public class Product {
     }
 
     public void setVolume(Double volume) {
-        if (volume == null) {
-            throw new RuntimeException("Заполните карточку товара полностью");
+        if (volume == null || volume <= 0) {
+            this.volume = 1d;
         } else {
             this.volume = volume;
         }
@@ -64,7 +64,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return String.format("%n") + getName() + ", цена: " +  getPrice() + " руб/кг, в количестве " +
+        return String.format("%n") + getName() + ", цена: " + getPrice() + " руб/кг, в количестве " +
                 getVolume() + " кг. Общая стоимость ";
     }
 }
