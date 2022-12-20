@@ -1,12 +1,12 @@
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Objects;
+package test;
 
-public class Test {
+import java.util.Map;
+
+public class QwertyTest {
 
     private Map<String, Integer> testMap;
 
-    public Test(Map<String, Integer> testMap) {
+    public QwertyTest(Map<String, Integer> testMap) {
         this.testMap = testMap;
     }
 

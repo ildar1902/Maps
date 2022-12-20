@@ -1,9 +1,9 @@
 import product.Product;
 import product.ProductList;
 import product.Recipe;
+import test.QwertyTest;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -68,18 +68,80 @@ public class Main {
 //        Дз-1. Задание 3
         System.out.println();
         System.out.println("    Дз-1. Задание 3");
-        Map<String, Integer> map = new HashMap<>();
-        Test test = new Test(map);
-        map.put("qwerty", 10);
-        map.put("qwerty1", 11);
-        map.put("qwerty2", 12);
-        map.put("qwerty3", 14);
-        map.put("qwerty4", 15);
-        map.put("qwerty5", 16);
-        System.out.println(map);
+        Map<String, Integer> map13 = new HashMap<>();
+        QwertyTest test = new QwertyTest(map13);
+        map13.put("qwerty", 10);
+        map13.put("qwerty1", 11);
+        map13.put("qwerty2", 12);
+        map13.put("qwerty3", 14);
+        map13.put("qwerty4", 15);
+        map13.put("qwerty5", 16);
+        System.out.println(map13);
         test.addTest("qwerty6", 20);
-        System.out.println(map);
-
+        System.out.println(map13);
+        System.out.println();
+//        Дз-2 Задание 1
+        System.out.println("    Дз-2. Задание 1");
+        Random random = new Random();
+        List<Integer> numbersInt = new ArrayList<>();
+        numbersInt.add(random.nextInt(1001));
+        numbersInt.add(random.nextInt(1001));
+        numbersInt.add(random.nextInt(1001));
+        System.out.println(numbersInt);
+        Integer total = 0;
+        for (Integer item : numbersInt) {
+            total += item;
+        }
+        List<Integer> numbersInt2 = new ArrayList<>();
+        numbersInt2.add(random.nextInt(1001));
+        numbersInt2.add(random.nextInt(1001));
+        numbersInt2.add(random.nextInt(1001));
+        System.out.println(numbersInt2);
+        Integer total2 = 0;
+        for (Integer integer : numbersInt2) {
+            total2 += integer;
+        }
+        List<Integer> numbersInt3 = new ArrayList<>();
+        numbersInt3.add(random.nextInt(1001));
+        numbersInt3.add(random.nextInt(1001));
+        numbersInt3.add(random.nextInt(1001));
+        System.out.println(numbersInt3);
+        Integer total3 = 0;
+        for (Integer item : numbersInt3) {
+            total3 += item;
+        }
+        List<Integer> numbersInt4 = new ArrayList<>();
+        numbersInt4.add(random.nextInt(1001));
+        numbersInt4.add(random.nextInt(1001));
+        numbersInt4.add(random.nextInt(1001));
+        System.out.println(numbersInt4);
+        Integer total4 = 0;
+        for (Integer integer : numbersInt4) {
+            total4 += integer;
+        }
+        List<Integer> numbersInt5 = new ArrayList<>();
+        numbersInt5.add(random.nextInt(1001));
+        numbersInt5.add(random.nextInt(1001));
+        numbersInt5.add(random.nextInt(1001));
+        System.out.println(numbersInt5);
+        Integer total5 = 0;
+        for (Integer integer : numbersInt5) {
+            total5 += integer;
+        }
+        Map<String, List<Integer>> map21 = new HashMap<>();
+        map21.put("stringKey1", numbersInt);
+        map21.put("stringKey2", numbersInt2);
+        map21.put("stringKey3", numbersInt3);
+        map21.put("stringKey4", numbersInt4);
+        map21.put("stringKey5", numbersInt5);
+        map21.forEach((key, value) -> System.out.println("Ключ: " + key + " -> " + value));
+        Map<String, Integer> secondMap21 = new HashMap<>();
+        secondMap21.put("stringKey1", total);
+        secondMap21.put("stringKey2", total2);
+        secondMap21.put("stringKey3", total3);
+        secondMap21.put("stringKey4", total4);
+        secondMap21.put("stringKey5", total5);
+        secondMap21.forEach((key, value) -> System.out.println("Ключ: " + key + " -> " + value));
     }
 
     public static Double calculatePrice(HashMap<Product, Double> products) {
@@ -89,4 +151,5 @@ public class Main {
         }
         return total;
     }
+
 }
