@@ -12,6 +12,7 @@ public class Main {
 //ДЗ-1. Задание 1.
         System.out.println("    ДЗ-1. Задание 1.");
         System.out.println();
+
         Map<String, String> phoneNumbers = new HashMap<>();
         phoneNumbers.put("Иван Иванов", "+7 931 573 23 51");
         phoneNumbers.put("Иван Петров", "+7 932 571 63 55");
@@ -33,10 +34,10 @@ public class Main {
         phoneNumbers.put("Рустам Демидов", "+7 945 321 67 91");
         phoneNumbers.put("Вадим Кукухин", "+7 998 432 50 34");
         phoneNumbers.put("Василий Бастов", "+7 937 782 98 31");
-
         for (Map.Entry<String, String> phone : phoneNumbers.entrySet()) {
             System.out.println("Контакт " + phone.getKey() + ": " + phone.getValue());
         }
+
         System.out.println();
 //        ДЗ-1. Задание 2.
         System.out.println("    ДЗ-1. Задание 2.");
@@ -45,7 +46,6 @@ public class Main {
         Product apples = new Product("яблоки", 45d, 2d);
         Product oranges = new Product("апельсины", 55d, 2d);
         HashMap<Product, Double> products = new HashMap<>();
-
         ProductList productList = new ProductList(products, "1");
         System.out.println(productList);
         productList.addProduct(oranges);
@@ -80,6 +80,7 @@ public class Main {
         test.addTest("qwerty6", 20);
         System.out.println(map13);
         System.out.println();
+
 //        Дз-2 Задание 1
         System.out.println("    Дз-2. Задание 1");
         Random random = new Random();
@@ -125,7 +126,7 @@ public class Main {
         map21.put("stringKey4", numbersInt4);
         map21.put("stringKey5", numbersInt5);
         System.out.println("Первая коллекция:");
-        map21.forEach((key, value) -> System.out.println("Ключ: " + key + " -> " + value));
+        map21.forEach((key, value) -> System.out.println( key + " -> " + value));
         Map<String, Integer> secondMap21 = new HashMap<>();
         secondMap21.put("stringKey1", total);
         secondMap21.put("stringKey2", total2);
@@ -133,7 +134,26 @@ public class Main {
         secondMap21.put("stringKey4", total4);
         secondMap21.put("stringKey5", total5);
         System.out.println("Новая коллекция:");
-        secondMap21.forEach((key, value) -> System.out.println("Ключ: " + key + " -> " + value));
+        secondMap21.forEach((key, value) -> System.out.println(key + " -> " + value));
+        System.out.println();
+
+        //Дз-2. Задание 2
+        System.out.println("    Дз-2. Задание 2");
+        Map<Integer, String> map22 = new LinkedHashMap<>();
+        map22.put(10, "десять");
+        map22.put(20, "двадцать");
+        map22.put(30, "тридцать");
+        map22.put(40, "сорок");
+        map22.put(50, "пятьдесят");
+        map22.put(60, "шестьдесят");
+        map22.put(70, "семьдесят");
+        map22.put(80, "восемьдесят");
+        map22.put(90, "девяноста");
+        map22.put(100, "сто");
+        for (Map.Entry<Integer, String> map : map22.entrySet()) {
+            System.out.println(map.getKey() + ":" + map.getValue());
+        }
+
     }
 
     public static Double calculatePrice(HashMap<Product, Double> products) {
